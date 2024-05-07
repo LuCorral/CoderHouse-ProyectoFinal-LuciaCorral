@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "3639c0cc-a538-4858-9f4b-05b44ac3bacf",
+		"name": "CoderHouse",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "34176936"
+	},
+	"item": [
+		{
+			"name": "listarProductos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Guitarra\",\r\n    \"precio\":\"199000\",\r\n    \"cantidad\":\"1\"\r\n}    ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/fecha/"
+			},
+			"response": []
+		},
+		{
+			"name": "agregarProductos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Flauta\",\r\n    \"precio\": 65000,\r\n    \"cantidad\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/Productos/agregar"
+			},
+			"response": []
+		},
+		{
+			"name": "editarProductoPorId",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"nombre\": \"Flauta Traversa\",\r\n    \"precio\": 85000.90,\r\n    \"cantidad\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/Productos/2/editar"
+			},
+			"response": []
+		},
+		{
+			"name": "eliminarProductoPorId",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8080/Productos/1/eliminar"
+			},
+			"response": []
+		},
+		{
+			"name": "buscarProductoPorId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/Productos/2"
+			},
+			"response": []
+		}
+	]
+}
